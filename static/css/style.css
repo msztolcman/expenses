@@ -1,0 +1,134 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    color: #000;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    background-color: #fff;
+}
+.center {
+    text-align: center;
+    float: none;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+label {
+	display: block;
+}
+#form_login input[type=text], #form_login input[type=password] {
+    width: 200px;
+    margin-bottom: 15px;
+}
+textarea, input[type=text], input[type=password], select, .descr {
+    width: 400px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    padding: 2px;
+}
+textarea {
+    height: 100px;
+}
+ul.errors li {
+    color: red;
+}
+#main{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+/* buttony */
+
+.btn_submit {
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* main menu */
+
+.main_menu {
+}
+
+.users_table,
+.categories_table,
+.items_table {
+    width:100%;
+}
+.items_filter_table {
+    width: 400px;
+    margin-bottom: 20px;
+}
+.users_table th,
+.users_table td,
+.categories_table th,
+.categories_table td,
+.items_filter_table td,
+.items_filter_table th,
+.items_table th,
+.items_table td {
+    padding: 2px 4px;
+    border-bottom: 1px dotted #a0a0a0;
+    border-right: 1px dotted #a0a0a0;
+}
+
+.items_filter_table td,
+.items_filter_table th {
+    border: none;
+}
+.items_filter_table input[type=text] {
+    width: 100px;
+}
+
+th a {
+    color: black;
+}
+th,
+th a:hover {
+    color: #777;
+}
+
+.row_even td {
+    background-color: #eee;
+}
+.row_odd td {
+    background-color: #ddd;
+}
+
+/* login page */
+
+#main.login_page {
+    position:absolute;
+    background-color: #dedede;
+    height:100%;
+    width:100%;
+}
+
+#form_login .form_login_container {
+    position: relative;
+    margin: 120px auto auto;
+    width: 276px;
+    height: 148px;
+    background: #fff url('/static/img/bkg_login.png') no-repeat scroll left top;
+    padding: 80px 55px 55px;
+}
+#form_login .form_login_container label {
+    float: left;
+    padding-right: 5px;
+}
+#form_login div .btn_submit {
+    margin: 20px auto;
+}
+

@@ -1,0 +1,34 @@
+Moduły zwykłe:
+Każdy moduł musi dziedziczyć po klasie ExpAbstract.
+Metodą którą trzeba zaimplementować jest execute () - musi ona przypisywać dane do szablonu
+(patrz ExpAbstract::__prepare ()).
+Inne metody są opcjonalne.
+
+Rozpoznawane przez dispatcher metody (w kolejności wywoływania przez dispatcher):
+    * authenticate ()
+        Autentykacja użytkownika. Zaimplementowana w ExpAbstract.
+
+    * validate () [opt]
+        Dodatkowe testy. Najczęściej używane gdy potrzebujemy sprawdzić, czy istnieje
+        w $_GET/$_POST określona zmienna (dla edycji projektu byłoby to ID projektu)
+
+        Wynik nie jest brany pod uwagę, założeniem było wykonanie location () wewnątrz
+        validate ().
+
+    * init () [opt]
+        Różne inicjalizacje - interpretacja dowolna. Zastępnik konstruktora.
+
+    * on_REQUEST_METHOD (on_post, on_get etc) [opt]
+        Metoda wywoływana gdy strona jest wywoływana konkretną metodą. Np po zatwierdzeniu
+        formularza najczęściej wysyłamy dane metodą POST, natomiast wchodząc dopiero na
+        formularz robimy to zazwyczaj metodą GET. Przykład wykorzystania: w on_get ()
+        wczytujemy dane z formularza, a w on_post () zapisujemy formularz.
+
+    * execute ()
+        Zazwyczaj jest tu po prostu wywołanie ExpAbstract::__prepare () z odpowiednimi
+        parametrami.
+
+W module należy też zdefiniować zmienną:
+protected $_tpl_file;
+przechowującą nazwę pliku szablonu modułu.
+

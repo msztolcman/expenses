@@ -1,0 +1,6 @@
+tmp/*
+tpl_cache/*
+config.php
+!tmp/README
+!tpl_cache/README
+uploadify.sh

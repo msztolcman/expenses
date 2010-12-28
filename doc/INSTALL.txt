@@ -1,0 +1,7 @@
+Wgraj pliki do wybranego katalogu, skopiuj config-base.php jako config.php,
+odpowiednio skonfiguruj.
+Używając expenses.sql utwórz tabele w bazie danych dla aplikacji.
+
+Teraz zaloguj się jako admin/admin, stwórz odpowiednie konta jeśli potrzebujesz, a
+na pewno zmień swoje dane / hasło!
+Voila! ;)
